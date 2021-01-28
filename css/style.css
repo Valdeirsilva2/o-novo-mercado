@@ -1,0 +1,283 @@
+@font-face {
+    font-family: "Gilroy-bold";
+    src: url("/fonts/Gilroy-Bold.ttf");
+    font-style: bold;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Gilroy-semi-bold";
+    src: url("/fonts/Gilroy-SemiBold.ttf");
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Gabriela";
+    src: url("/fonts/Gabriela-Regular.ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Gilroy";
+    src: url("/fonts/Gilroy-Regular.ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+:root {
+    /* colors */
+    --font-orange: #f59700;
+    --bg-grey: #e5e5e5;
+    --white: #fff;
+    --dark: #182245;
+    --yellow: #F3D4A0;
+}
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.txt-orange {
+    color: var(--font-orange);
+}
+.txt-dark {
+    color: var(--dark);
+}
+.txt-white {
+    color: var(--white);
+}
+.txt-yellow {
+    color: var(--yellow);
+}
+.font-large {
+    font-size: 30px;
+    
+}
+.font-medium {
+    font-size: 24px;
+}
+.font-regular {
+    font-size: 20px;
+}
+.content-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.font-small {
+    font-size: 16px;
+}
+.spaceblock-bottom {
+    padding-bottom: 105px;
+}
+.spaceblock-top {
+    padding-top: 70px;
+}
+.onm-cta li::before {
+    position: absolute;
+    content: '';
+    background: url(/wp-content/themes/o-novo-mercado/img/onm-comoFunciona-check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 15px;
+    height: 11px;
+    margin-left: -3rem;
+    border-radius: 1rem;
+}
+.font-semi-bold{
+    font-family: "Gabriela" !important;
+    line-height: 1.5;
+}
+
+html {
+    font-family: "Gilroy";
+}
+body {
+    height: 100%;
+    width: 100vw;
+    font-family: "Gilroy";
+    background: var(--bg-grey);
+}
+.content {
+    margin: 0 19px;
+    z-index: 1;
+}
+.btn-default {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    color: var(--white);
+    font-family: "Gilroy-bold";
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    background: var(--font-orange);
+    width: 200px;
+    height: 60px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 24px 0;
+}
+.content .logo {
+    display: flex;
+    justify-content: center;
+    height: 213px;
+    width: 100%;
+}
+.content .logo img {
+    position: absolute;
+    width: 268px;
+    height: 213px;
+    top: 0px;
+}
+.content .bg-yellow img {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+}
+.content .video-1 {
+    width: 100%;
+    position: relative;
+    height: 159px;
+    bottom: 38px;
+}
+.content .info .vertical-line {
+    width: 2px;
+    height: 142px;
+    background: var(--font-orange);
+    margin: 25px 0;
+    
+}
+.content .info h2 {
+    font-family: "Gilroy-bold";
+    line-height: 29px;
+    margin: 16px 0;
+}
+.content .info p {
+    font-family: "Gilroy";
+    font-size: 16px;
+    line-height: 19px;
+}
+.content .info img {
+    width: 100%;
+    height: 159px;
+    object-fit: contain;
+}
+.content .info .img-mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 57px 0;
+}
+.content .typewriter {
+    width: 100%;
+    margin: 24px 0;
+    display: flex;
+    justify-content: center;
+}
+.content .typewriter img {
+    width: 244px;
+    height: 212px;
+}
+.card {
+    font-family: "Gilroy";
+    background-color: var(--white);
+    position: relative;
+    width: 100%;
+    top: 45px;
+    position: relative;
+    margin-bottom: 48px ;
+    
+}
+.card .content-card .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 16px 0;
+}
+.card .content-card .subtitle {
+    font-size: 20px;
+    margin-bottom: 26px;
+    
+}
+.card .content-card {
+    padding: 35px 23px;
+}
+.card .content-card ul {
+    list-style: none;
+}
+.card .content-card ul li {
+    margin: 16px 0;
+    
+}
+.content .info2 {
+    padding: 70px 0
+    
+}
+.content .info2 h2{
+    font-family: "Gabriela";
+    color: var(--font-orange);
+    font-size: 30px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+.content .info2 p {
+    font-family: "Gilroy";
+    line-height: 1.5;
+    margin: 24px 0
+}
+.content .info2 .btn-default {
+    margin-top: 24px;
+}
+.card2 {
+    width: 100%;
+    background-color: var(--yellow);
+    padding: 18px 0;
+    margin: 25px 0;
+    font-family: "Gilroy";
+}
+.card2 .content-card {
+    margin: 0px 10px;
+    border: 1px solid #182245;
+    border-radius: 5px;
+    padding: 18px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card2 .content-card h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 17px;
+
+}
+.card2 .content-card .subtitle {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: var(--dark);
+    margin-bottom: 25px;
+}
+.card2 .content-card ul {
+    list-style: none;
+
+}
+.card2 .content-card ul li{
+   margin-left: 35px;
+   margin-bottom: 1rem;
+}
+.card2 .content-card ul li::before {
+    left: 39px;
+    position: absolute;
+    content: "✓";
+    width: 15px;
+    height: 11px;
+    font-size: 25px;
+    color: var(--dark);
+}
+
