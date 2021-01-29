@@ -11,17 +11,22 @@
     font-weight: 600;
 }
 @font-face {
+    font-family: "Gilroy-medium";
+    src: url("/fonts/Gilroy-Medium.ttf");
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gilroy-regular";
+    src: url("/fonts/Gilroy-Regular.ttf");
+    font-style: normal;
+}
+@font-face {
     font-family: "Gabriela";
     src: url("/fonts/Gabriela-Regular.ttf");
     font-style: normal;
     font-weight: 400;
 }
-@font-face {
-    font-family: "Gilroy";
-    src: url("/fonts/Gilroy-Regular.ttf");
-    font-style: normal;
-    font-weight: 400;
-}
+
 :root {
     /* colors */
     --font-orange: #f59700;
@@ -72,18 +77,6 @@
 }
 .spaceblock-top {
     padding-top: 70px;
-}
-.onm-cta li::before {
-    position: absolute;
-    content: '';
-    background: url(/wp-content/themes/o-novo-mercado/img/onm-comoFunciona-check.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 15px;
-    height: 11px;
-    margin-left: -3rem;
-    border-radius: 1rem;
 }
 .font-semi-bold{
     font-family: "Gabriela" !important;
@@ -212,6 +205,13 @@ body {
     margin: 16px 0;
     
 }
+.content .bg-blue img {
+    position: absolute;
+    left: 0px;
+    max-height: 1440px;
+    width: 100%;
+    z-index: -1;
+}
 .content .info2 {
     padding: 70px 0
     
@@ -279,5 +279,165 @@ body {
     height: 11px;
     font-size: 25px;
     color: var(--dark);
+}
+
+.accordion {
+    margin-top: 150px;
+}
+.accordion .title {
+    font-family: "Gilroy-medium";
+    color: var(--font-orange);
+    text-align: center;
+    font-size: 40px;
+}
+
+.collapse-accordion ul {
+    font-family: "Gilroy-regular";
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.collapse-accordion ul li {
+    background-color: var(--white);
+}
+.collapse-accordion ul li p {
+    margin-bottom: 16px;
+    font-size: 12px;
+    line-height: 1.2;
+}
+.collapse-accordion ul li p span{
+    font-weight: 700;
+}
+.collapse-accordion ul li p a {
+    color: var(--font-orange);
+    text-decoration: none;
+}
+
+.collapse-accordion label {
+    display: block;
+    margin: 25px 0;
+    cursor: pointer;
+    color: var(--font-orange);
+    font-family: "Gilroy-bold";
+    padding: 10px 40px 10px 20px;
+    height: 54px;
+    box-sizing: border-box;
+    border-bottom: none;
+    background-color: var(--white);
+    position: relative;
+}
+
+.collapse-accordion label:hover {
+    background: var(--white);
+}
+
+.collapse-accordion label:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    text-indent: -9999px;
+    border-bottom: 1px solid var(--dark);
+    border-right: 1px solid var(--dark);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+    color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transform: rotate(42deg);
+    right: 15px;
+    top: 50%;
+    margin-top: -5px;
+}
+
+.collapse-accordion input[type="checkbox"]:checked+label:before {
+    transform: rotate(-135deg);
+}
+
+.collapse-accordion input[type="radio"]:checked+label:before {
+    transform: rotate(45deg);
+    top: 20px;
+}
+
+.collapse-accordion label.last {
+    border-bottom: 1px solid #fff;
+}
+
+.collapse-accordion ul ul li {
+    padding: 5px 20px ;
+    background: var(--white);
+}
+
+
+.collapse-accordion input[type="checkBox"] {
+    position: absolute;
+    left: -9999px;
+}
+.collapse-accordion input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+}
+
+.collapse-accordion input[type="checkBox"]~ul {
+    height: 0;
+    transform: scaleY(0);
+  transition: transform .2s ease-out;
+}
+.collapse-accordion input[type="radio"]~ul {
+    height: 0;
+    transform: scaleY(0);
+transition: transform .5s ease-out;
+}
+
+.collapse-accordion input[type="checkBox"]:checked~ul {
+    height: 100%;
+    transform-origin: top;
+    transition: transform .2s ease-out;
+    transform: scaleY(1);
+}
+
+.collapse-accordion input[type="radio"]:checked~ul {
+    height: 100%;
+    transform-origin: top;
+    transition: transform .2s ease-out;
+    transform: scaleY(1);
+}
+
+.collapse-accordion input[type="checkBox"]:checked+label {
+    background: var(--white);
+}
+.collapse-accordion input[type="radio"]:checked+label {
+}
+
+.collapse-accordion input[type="checkbox"]:checked+label .collpaseText {
+    display: block;
+}
+
+.collapse-accordion input[type="radio"]:checked+label .collpaseText {
+    display: block;
+}
+
+/* .collapse-accordion input[type="checkbox"]:checked+label .expandText {
+    display: none;
+}
+
+.collapse-accordion input[type="radio"]:checked+label .expandText {
+    display: none;
+} */
+
+.collpaseText {
+    display: none;
+}
+
+.info {
+margin-top: 50px;
+color: #000;
+font-size: 24px;
+}
+.info span {
+color: red;
 }
 
