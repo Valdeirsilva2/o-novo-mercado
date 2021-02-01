@@ -594,7 +594,7 @@ transition: transform .5s ease-out;
         width: 373px;
         height: 324px;
         position: absolute;
-        left: 100px;
+        left: -10px;
     }
     .content .typewriter .book {
         position: absolute;
@@ -602,7 +602,7 @@ transition: transform .5s ease-out;
         object-fit: contain;
         width: 373px;
         height: 324px; 
-        right: 85px;
+        right: -105px;
         top: 145px;        
     }
     .content .typewriter .info {
@@ -614,7 +614,7 @@ transition: transform .5s ease-out;
         padding: 35px 23px 35px 57px;
     }
     .cards .card {
-        width: 47%;
+        width: 62%;
         height: 386px;
         top: 0;
         position: relative;
