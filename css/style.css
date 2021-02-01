@@ -1,4 +1,10 @@
 @font-face {
+    font-family: "Gilroy-ex-bold";
+    src: url("/fonts/Gilroy-ExtraBold.ttf");
+    font-style: bold;
+    font-weight: 700;
+}
+@font-face {
     font-family: "Gilroy-bold";
     src: url("/fonts/Gilroy-Bold.ttf");
     font-style: bold;
@@ -26,7 +32,6 @@
     font-style: normal;
     font-weight: 400;
 }
-
 :root {
     /* colors */
     --font-orange: #f59700;
@@ -35,54 +40,9 @@
     --dark: #182245;
     --yellow: #F3D4A0;
 }
-.text-center {
-    text-align: center;
-}
-.text-left {
-    text-align: left;
-}
 .txt-orange {
     color: var(--font-orange);
 }
-.txt-dark {
-    color: var(--dark);
-}
-.txt-white {
-    color: var(--white);
-}
-.txt-yellow {
-    color: var(--yellow);
-}
-.font-large {
-    font-size: 30px;
-    
-}
-.font-medium {
-    font-size: 24px;
-}
-.font-regular {
-    font-size: 20px;
-}
-.content-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.font-small {
-    font-size: 16px;
-}
-.spaceblock-bottom {
-    padding-bottom: 105px;
-}
-.spaceblock-top {
-    padding-top: 70px;
-}
-.font-semi-bold{
-    font-family: "Gabriela" !important;
-    line-height: 1.5;
-}
-
 html {
     font-family: "Gilroy";
 }
@@ -90,7 +50,12 @@ body {
     height: 100%;
     width: 100vw;
     font-family: "Gilroy";
+    overflow-x: hidden;
     background: var(--bg-grey);
+}
+.container {
+    display: flex;
+    justify-content: center;
 }
 .content {
     margin: 0 19px;
@@ -125,34 +90,58 @@ body {
     height: 213px;
     top: 0px;
 }
-.content .bg-yellow img {
+.content .bg-yellow-mobi img {
     position: absolute;
     left: 0px;
     width: 100%;
     z-index: -1;
 }
-.content .video-1 {
+.container .bg-yellow-desk {
+    display: none;
+}
+.content .info-video {
+    display: flex;
+    flex-direction: column;
+}
+.content .info-video .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.content .info-video .info h2{
+    font-size: 24px;
+    color: var(--font-orange);
+    margin: 16px 0;
+    
+}
+.content .info-video .info p{
+    font-size: 20px;
+}
+.content .info-video .video{
     width: 100%;
     position: relative;
     height: 159px;
     bottom: 38px;
 }
 .content .info .vertical-line {
-    width: 2px;
+    width: 1px;
     height: 142px;
     background: var(--font-orange);
-    margin: 25px 0;
-    
+    margin: 25px 0;    
 }
-.content .info h2 {
+.content .typewriter .info h2 {
     font-family: "Gilroy-bold";
-    line-height: 29px;
+    line-height: 1.2;
+    font-size: 24px;
+    color: var(--font-dark);
     margin: 16px 0;
 }
 .content .info p {
     font-family: "Gilroy";
     font-size: 16px;
-    line-height: 19px;
+    line-height: 1.2;
 }
 .content .info img {
     width: 100%;
@@ -169,13 +158,27 @@ body {
     width: 100%;
     margin: 24px 0;
     display: flex;
+    align-items: center;
+    text-align: center;
     justify-content: center;
+    flex-direction: column;
 }
-.content .typewriter img {
+.content .typewriter .machine {
     width: 244px;
     height: 212px;
+    object-fit: contain;
 }
-.card {
+
+.content .typewriter .book {
+    display: none;
+}
+.content .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cards .card {
     font-family: "Gilroy";
     background-color: var(--white);
     position: relative;
@@ -185,60 +188,110 @@ body {
     margin-bottom: 48px ;
     
 }
-.card .content-card .title {
+.cards .card .n-impar, 
+.cards .card .n-par{
+    display: none;
+}
+.cards .card .content-card .title {
     font-size: 20px;
     font-weight: bold;
     margin: 16px 0;
+    color: var(--font-orange);
 }
-.card .content-card .subtitle {
+.cards .card .content-card .subtitle {
     font-size: 20px;
     margin-bottom: 26px;
     
 }
-.card .content-card {
+.cards .card .content-card {
     padding: 35px 23px;
 }
-.card .content-card ul {
+.cards .card .content-card ul {
     list-style: none;
 }
-.card .content-card ul li {
+.cards .card .content-card ul li {
     margin: 16px 0;
     
 }
-.content .bg-blue img {
+.content .infos .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.content .infos .info h2{
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 25px 0;
+}
+.content .plans .bg-blue-mobi{
     position: absolute;
     left: 0px;
-    max-height: 1440px;
     width: 100%;
     z-index: -1;
 }
-.content .info2 {
-    padding: 70px 0
+.content .plans .bg-blue-mobi img{
+    max-height: 1440px;
+    width: 100vw;
     
 }
-.content .info2 h2{
+.content .plans .info1-plans {
+    margin-top: 70px;
+    text-align: center;
+}
+.content .plans h2{
+    color: var(--yellow);
+    font-size: 24px;
+}
+.content .infos .info2 {
+    padding: 70px 0;
+}
+.content .infos .info2 .row h2{
     font-family: "Gabriela";
     color: var(--font-orange);
     font-size: 30px;
     line-height: 1.5;
     margin-bottom: 16px;
 }
-.content .info2 p {
+.content .infos .info2 .row p {
     font-family: "Gilroy";
     line-height: 1.5;
     margin: 24px 0
 }
-.content .info2 .btn-default {
+.content .infos .info2 .row .btn-default {
     margin-top: 24px;
 }
-.card2 {
+.content .infos .info2 .note-desk {
+    display: none;
+}
+.content .infos .info .info-img2 {
+    margin: 57px 0;
+}
+.content .plans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content .plans p{
+    color: var(--white);
+}
+.content .plans .bg-blue-desk {
+    display: none;
+}
+.content .plans .row-card-plan img {
+    display: none;
+}
+
+.content .plans .row-card-plan .card2  {
     width: 100%;
     background-color: var(--yellow);
     padding: 18px 0;
     margin: 25px 0;
     font-family: "Gilroy";
+    margin-bottom: 75px;
 }
-.card2 .content-card {
+.content .plans .row-card-plan .card2 .content-card {
     margin: 0px 10px;
     border: 1px solid #182245;
     border-radius: 5px;
@@ -249,13 +302,13 @@ body {
     align-items: center;
 }
 
-.card2 .content-card h2 {
+.content .plans .row-card-plan .card2 .content-card h2 {
     text-transform: uppercase;
     font-size: 20px;
     margin-bottom: 17px;
 
 }
-.card2 .content-card .subtitle {
+.content .plans .row-card-plan .card2 .content-card .subtitle {
     font-weight: bold;
     font-size: 30px;
     line-height: 36px;
@@ -263,16 +316,15 @@ body {
     color: var(--dark);
     margin-bottom: 25px;
 }
-.card2 .content-card ul {
+.content .plans .row-card-plan .card2 .content-card ul {
     list-style: none;
 
 }
-.card2 .content-card ul li{
-   margin-left: 35px;
-   margin-bottom: 1rem;
+.content .plans .row-card-plan .card2 .content-card ul li{
+    margin: 32px 24px 32px 60px;
 }
-.card2 .content-card ul li::before {
-    left: 39px;
+.content .plans .row-card-plan .card2 .content-card ul li::before {
+    left: 60px;
     position: absolute;
     content: "✓";
     width: 15px;
@@ -281,6 +333,16 @@ body {
     color: var(--dark);
 }
 
+.content .plans .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+.content .plans p{
+    margin: 16px;
+}
 .accordion {
     margin-top: 150px;
 }
@@ -415,29 +477,328 @@ transition: transform .5s ease-out;
 .collapse-accordion input[type="checkbox"]:checked+label .collpaseText {
     display: block;
 }
-
 .collapse-accordion input[type="radio"]:checked+label .collpaseText {
     display: block;
 }
-
-/* .collapse-accordion input[type="checkbox"]:checked+label .expandText {
-    display: none;
-}
-
-.collapse-accordion input[type="radio"]:checked+label .expandText {
-    display: none;
-} */
-
 .collpaseText {
     display: none;
 }
-
-.info {
-margin-top: 50px;
-color: #000;
-font-size: 24px;
+.content footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 80px 0;
 }
-.info span {
-color: red;
+.content footer .privacity {
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
+.content footer a{
+    text-align: center;
+    text-decoration: none;
+    color: var(--dark);
+    padding: 0 20px;
+}
+.content footer span{
+    width: 100%;
+    margin-top: 16px;
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+    }
+    .container .content {
+    }
+    .content .logo {
+        height: 135px;
+    }
+    .content .logo img {
+        position: absolute;
+        top: 0px;
+    }
+    .container .bg-yellow-mobi {
+        display: none;
+    }
+    .container .bg-yellow-desk {
+        position: absolute;
+        left: 0px;
+        display: flex;
+        width: 100%;
+        z-index: -1;
+    }
+    .container .bg-yellow-desk img {
+        width: 100vw;
+    }
+    .content .info-video .info{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        text-align: left;
+    }
+    .content .info-video {
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        
+    }
+    .content .info-video h2 {
+        font-family: "Gilroy-bold";
+        font-size: 42px;
+        line-height: 1.2;
+        font-weight: bold;
+    }
+    .content .info-video .video{
+        width: 665px;
+        height: 374px;
+        position: initial;
+        top: 0; 
+        margin-left: 25px; 
+    }
+    .content .info .vertical-line {
+        margin: 80px 0;
+    }
+
+    .content .info-video .info {
+        width: 415px;
+        margin-top: 0;
+        text-align: left;
+    }
+    .content .info-video .info h2{
+        font-size: 42px;
+        color: var(--font-dark);
+    } 
+    .content .typewriter {
+        flex-direction: row;
+        position: relative;
+        margin-top: 144px;
+        position: relative;
+        margin-bottom: 80px;
+    }
+    .content .typewriter .info h2 {
+        font-family: "Gilroy-regular";
+        font-size: 36px;
+        line-height: 1.2;
+    }
+    .content .typewriter p {
+        font-size: 20px;
+    }
+    .content .typewriter .machine {
+        width: 373px;
+        height: 324px;
+        position: absolute;
+        left: 100px;
+    }
+    .content .typewriter .book {
+        position: absolute;
+        display: initial;
+        object-fit: contain;
+        width: 373px;
+        height: 324px; 
+        right: 85px;
+        top: 145px;        
+    }
+    .content .typewriter .info {
+        width: 540px;
+        
+    }
+    .cards .card .content-card {
+        z-index: 10;
+        padding: 35px 23px 35px 57px;
+    }
+    .cards .card {
+        width: 47%;
+        height: 386px;
+        top: 0;
+        position: relative;
+        margin-bottom: 60px;
+    }
+    .cards .card .content-card .subtitle {
+        font-size: 24px;
+    }
+    .cards .card .n-impar {
+        display: flex;
+        position:absolute;
+        left: -195px;
+        top: 20px;
+    }
+    .cards .card .n-impar img,
+    .cards .card .n-par img {        
+        z-index: -1;
+        width: 228px;
+        height: 138px;
+        object-fit: contain;
+    }
+    .cards .card .n-par {
+        display: flex;
+        position:absolute;
+        right: -207px;
+        top: 20px;
+    }
+    .cards .card .content-card ul li{
+        font-size: 18px;
+        margin: 8px 0;
+    }
+    .content .infos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .content .infos .info {
+        text-align: center;
+        width: 33%;
+    }
+    .content .infos .info h2{
+        font-size: 36px;
+        line-height: 1.2;
+    }
+    .content .infos .info p{
+        font-size: 20px;
+        line-height: 1.2;
+        
+    }
+    .content .infos .info .info-img1{
+        width: 812px;
+        height: 457px;
+    }
+    .content .infos .info2 {
+        display: flex;
+        justify-content: flex-start;
+        width: 65%;
+        position: relative;
+    }
+    .content .infos .info2 .row {
+        width: 685px;
+    }
+    .content .infos .info2 .row h2{
+        font-size: 48px;
+    }
+    .content .infos .info2 .row p{
+        width: 450px;
+    }
+    .content .infos .info2 .note-desk {
+        display: flex;
+        margin-top: 14rem;
+        position: absolute;
+        right: -190px;
+    }
+    .content .infos .info .info-img2 {
+        width: 800px;
+        height: 574px;
+        margin-top: 25px;
+        margin-bottom: 80px;
+    }
+    .content .plans .bg-blue-desk {
+        display: flex;
+        position: absolute;
+        left: 0px;
+        z-index: -1;
+    }
+    .content .plans .bg-blue-desk img {        
+        width: 100vw;
+        height: 100%;   
+    }
+    .content .plans .bg-blue-mobi{
+        display: none;
+    }
+    .content .plans {
+        font-family: "Gilroy";
+    }
+    .content .plans h2 {
+        font-size: 36px;
+        color: var(--yellow);
+        line-height: 1.2;
+    }
+    .content .plans p {
+        font-size: 20px;
+        line-height: 1.2;
+        color: var(--white);
+        margin-top: 16px;
+        font-size: 20px;
+    }
+    .content .plans .info1-plans {
+        text-align: center;
+        margin-top: 180px;
+        width: 38%;
+    }
+    .content .plans .row-card-plan {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 107px;
+    }
+    .content .plans .row-card-plan .card2  {
+        width: 360px;
+    }
+    .content .plans .row-card-plan .card2 .content-card {        
+        height: 654px;       
+    }
+    .content .plans .row-card-plan .card2 .content-card .title{
+        color: var(--dark);
+    }
+    .content .plans .row-card-plan .card2 .content-card .subtitle{
+        font-size: 36px;
+        font-family: "Gilroy-bold";
+        margin-bottom: 24px;
+    }
+    .content .plans .row-card-plan .card2 .content-card ul{
+        width: 90%;            
+    }
+    .content .plans .row-card-plan .card2 .content-card li{
+        position: relative;
+        margin: 24px 0 24px 35px;
+    }
+    .content .plans .row-card-plan .card2 .content-card ul li::before {
+        left: -30px;
+        position: absolute;
+        content: "✓";
+        width: 15px;
+        height: 11px;
+        font-size: 25px;
+        color: var(--dark);
+    }
+    .content .plans .row-card-plan img{
+        display: initial;
+        margin-left: 70px;    
+    }
+    .content .plans .row-card-plan .card2  {
+        margin-bottom: 0;
+    }
+    .content .plans .info {
+        width: 38%;
+    }
+    .accordion {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    .collapse-accordion {
+        max-width: 815px;
+    }
+    .collapse-accordion ul li p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1667px) {
+    .content .typewriter .book {
+        top: 0;
+        left: 0;
+        position: relative;
+    }
+    .content .typewriter .machine {
+        left: 0;
+        position: relative;
+    }
+}
