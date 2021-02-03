@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Gilroy-ex-bold";
-    src: url("/fonts/Gilroy-ExtraBold.ttf");
+    src: url("/fonts/Gilroy-Heavy.ttf");
     font-style: bold;
     font-weight: 700;
 }
@@ -12,7 +12,7 @@
 }
 @font-face {
     font-family: "Gilroy-semi-bold";
-    src: url("/fonts/Gilroy-SemiBold.ttf");
+    src: url("/fonts/");
     font-style: normal;
     font-weight: 600;
 }
@@ -39,17 +39,18 @@
     --white: #fff;
     --dark: #182245;
     --yellow: #F3D4A0;
+    --btn-orange-hover: #d27f00;    
 }
 .txt-orange {
     color: var(--font-orange);
 }
-html {
-    font-family: "Gilroy";
+* {
+    font-family: "Gilroy-regular";
 }
 body {
     height: 100%;
     width: 100vw;
-    font-family: "Gilroy";
+    font-family: "Gilroy-regular";
     overflow-x: hidden;
     background: var(--bg-grey);
 }
@@ -71,12 +72,17 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
+    transition: ease-in-out 0.2s;
     background: var(--font-orange);
     width: 200px;
     height: 60px;
     border-radius: 5px;
     font-size: 16px;
     margin: 24px 0;
+}
+.btn-default:hover {
+    background: var(--btn-orange-hover);
+    
 }
 .content .logo {
     display: flex;
@@ -102,6 +108,8 @@ body {
 .content .info-video {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 .content .info-video .info{
     display: flex;
@@ -111,6 +119,7 @@ body {
     text-align: center;
 }
 .content .info-video .info h2{
+    font-family: "Gilroy-bold";
     font-size: 24px;
     color: var(--font-orange);
     margin: 16px 0;
@@ -119,10 +128,12 @@ body {
 .content .info-video .info p{
     font-size: 20px;
 }
+
 .content .info-video .video{
-    width: 100%;
     position: relative;
+    width: 282px;
     height: 159px;
+    object-fit: contain;
     bottom: 38px;
 }
 .content .info .vertical-line {
@@ -132,14 +143,14 @@ body {
     margin: 25px 0;    
 }
 .content .typewriter .info h2 {
-    font-family: "Gilroy-bold";
+    font-family: "Gilroy-medium";
     line-height: 1.2;
     font-size: 24px;
     color: var(--font-dark);
     margin: 16px 0;
 }
 .content .info p {
-    font-family: "Gilroy";
+    font-family: "Gilroy-regular";
     font-size: 16px;
     line-height: 1.2;
 }
@@ -172,6 +183,9 @@ body {
 .content .typewriter .book {
     display: none;
 }
+.content .typewriter p {
+    width: 98%;
+}
 .content .cards {
     display: flex;
     flex-direction: column;
@@ -179,7 +193,7 @@ body {
     align-items: center;
 }
 .cards .card {
-    font-family: "Gilroy";
+    font-family: "Gilroy-regular";
     background-color: var(--white);
     position: relative;
     width: 100%;
@@ -255,7 +269,7 @@ body {
     margin-bottom: 16px;
 }
 .content .infos .info2 .row p {
-    font-family: "Gilroy";
+    font-family: "Gilroy-regular";
     line-height: 1.5;
     margin: 24px 0
 }
@@ -288,7 +302,7 @@ body {
     background-color: var(--yellow);
     padding: 18px 0;
     margin: 25px 0;
-    font-family: "Gilroy";
+    font-family: "Gilroy-regular";
     margin-bottom: 75px;
 }
 .content .plans .row-card-plan .card2 .content-card {
@@ -344,14 +358,14 @@ body {
 .content .plans p{
     margin: 16px;
 }
-.accordion {
+.content .accordion {
     margin-top: 150px;
 }
-.accordion .title {
+.content .accordion .title {
     font-family: "Gilroy-medium";
     color: var(--font-orange);
     text-align: center;
-    font-size: 40px;
+    font-size: 36px;
 }
 
 .collapse-accordion ul {
@@ -382,7 +396,7 @@ body {
     cursor: pointer;
     color: var(--font-orange);
     font-family: "Gilroy-bold";
-    padding: 10px 40px 10px 20px;
+    padding: 30px 40px 10px 20px;
     height: 54px;
     box-sizing: border-box;
     border-bottom: none;
@@ -485,6 +499,7 @@ transition: transform .5s ease-out;
     display: none;
 }
 .content footer {
+    font-family: "Gilroy-regular";
     width: 100%;
     display: flex;
     justify-content: center;
@@ -503,7 +518,7 @@ transition: transform .5s ease-out;
     text-align: center;
     text-decoration: none;
     color: var(--dark);
-    padding: 0 20px;
+    padding: 0 13px;
 }
 .content footer span{
     width: 100%;
@@ -533,9 +548,6 @@ transition: transform .5s ease-out;
         width: 100%;
         z-index: -1;
     }
-    .container .bg-yellow-desk img {
-        width: 100vw;
-    }
     .content .info-video .info{
         display: flex;
         justify-content: center;
@@ -547,7 +559,7 @@ transition: transform .5s ease-out;
         flex-direction: row-reverse;
         justify-content: center;
         align-items: center;
-        margin-top: 100px;
+        margin-top: 120px;
         
     }
     .content .info-video h2 {
@@ -561,7 +573,7 @@ transition: transform .5s ease-out;
         height: 374px;
         position: initial;
         top: 0; 
-        margin-left: 25px; 
+        margin-left: 52px; 
     }
     .content .info .vertical-line {
         margin: 80px 0;
@@ -595,7 +607,7 @@ transition: transform .5s ease-out;
         width: 373px;
         height: 324px;
         position: absolute;
-        left: -10px;
+        left: -112px;
     }
     .content .typewriter .book {
         position: absolute;
@@ -627,7 +639,7 @@ transition: transform .5s ease-out;
     .cards .card .n-impar {
         display: flex;
         position:absolute;
-        left: -195px;
+        left: -188px;
         top: 20px;
     }
     .cards .card .n-impar img,
@@ -654,8 +666,9 @@ transition: transform .5s ease-out;
         flex-direction: column;
     }
     .content .infos .info {
+        font-family: "Gilroy-regular";
         text-align: center;
-        width: 33%;
+        width: 38%;
     }
     .content .infos .info h2{
         font-size: 36px;
@@ -689,7 +702,7 @@ transition: transform .5s ease-out;
         display: flex;
         margin-top: 14rem;
         position: absolute;
-        right: -190px;
+        right: -130px;
     }
     .content .infos .info .info-img2 {
         width: 800px;
@@ -711,7 +724,7 @@ transition: transform .5s ease-out;
         display: none;
     }
     .content .plans {
-        font-family: "Gilroy";
+        font-family: "Gilroy-regular";
     }
     .content .plans h2 {
         font-size: 36px;
@@ -751,9 +764,9 @@ transition: transform .5s ease-out;
     .content .plans .row-card-plan .card2 .content-card ul{
         width: 90%;            
     }
-    .content .plans .row-card-plan .card2 .content-card li{
+    .content .plans .row-card-plan .card2 .content-card ul li{
         position: relative;
-        margin: 24px 0 24px 35px;
+        margin: 28px 0 24px 35px;
     }
     .content .plans .row-card-plan .card2 .content-card ul li::before {
         left: -30px;
@@ -774,12 +787,15 @@ transition: transform .5s ease-out;
     .content .plans .info {
         width: 38%;
     }
-    .accordion {
+    .content .accordion {
         display: flex;
         justify-content: center;
         align-items:center;
         flex-direction: column;
         margin-bottom: 50px;
+    }
+    .content .accordion .title {
+        margin-bottom: 19px;
     }
     .collapse-accordion {
         max-width: 815px;
@@ -787,8 +803,30 @@ transition: transform .5s ease-out;
     .collapse-accordion ul li p {
         font-size: 16px;
     }
+    .content footer a{
+        padding: 0 20px;
+    }
 }
-
+@media (max-width: 1135px){
+    .content .info-video .video{
+        width: 30rem;
+        height: 20rem;
+    }
+}
+@media (max-width: 1260px){
+    .content .typewriter .book {
+        width: 244px;
+    }
+    .content .typewriter .machine {
+        width: 233px;
+    }
+}
+@media (max-width: 767px){
+    .content .info-video .video{
+        width: 263px;
+        height: 159px;
+    }
+}
 @media screen and (max-width: 1667px) {
     .content .typewriter .book {
         top: 0;
