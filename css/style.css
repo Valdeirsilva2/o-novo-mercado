@@ -633,11 +633,13 @@ transition: transform .5s ease-out;
     .content .info .vertical-line {
         margin: 80px 0;
     }
-
     .content .info-video .info {
         width: 415px;
         margin-top: 0;
-        text-align: left;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .content .info-video .info h2{
         font-size: 42px;
@@ -671,7 +673,6 @@ transition: transform .5s ease-out;
         height: 324px;
         right: 165px;
         top: 187px;
-    }     
     }
     .content .typewriter .info {
         width: 540px;
@@ -785,8 +786,7 @@ transition: transform .5s ease-out;
     }
     .content .plans .bg-blue-mobi{
         display: none;
-    }
-    
+    }    
     .content .plans .title {
         font-size: 36px;
         color: var(--yellow);
