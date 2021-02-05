@@ -27,10 +27,15 @@
     font-style: normal;
 }
 @font-face {
-    font-family: "Gabriela";
-    src: url("/fonts/Gabriela-Regular.ttf");
+    font-family: "Gilroy-light";
+    src: url("/fonts/Gilroy-Light.ttf");
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Gabriela-semi-bold" sans-serif;
+    src: url("/fonts/Gabriela-SemiBold.otf");
+    font-style: normal;
 }
 :root {
     /* colors */
@@ -87,13 +92,13 @@ body {
 .content .logo {
     display: flex;
     justify-content: center;
-    height: 213px;
+    height: 145px;
     width: 100%;
 }
 .content .logo img {
-    position: absolute;
-    width: 268px;
-    height: 213px;
+    position: absolute;    
+    height: 100px;
+    width: 112px;
     top: 0px;
 }
 .content .bg-yellow-mobi img {
@@ -113,6 +118,7 @@ body {
 }
 .content .info-video .info{
     display: flex;
+    width: 282px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -122,11 +128,8 @@ body {
     font-family: "Gilroy-bold";
     font-size: 24px;
     color: var(--font-orange);
-    margin: 16px 0;
+    margin-bottom: 16px;
     
-}
-.content .info-video .info p{
-    font-size: 20px;
 }
 
 .content .info-video .video{
@@ -134,19 +137,19 @@ body {
     width: 282px;
     height: 159px;
     object-fit: contain;
-    bottom: 38px;
+    bottom: 20px;
 }
 .content .info .vertical-line {
     width: 1px;
     height: 142px;
     background: var(--font-orange);
-    margin: 25px 0;    
+    margin: 25px 0; 
 }
 .content .typewriter .info h2 {
     font-family: "Gilroy-medium";
     line-height: 1.2;
     font-size: 24px;
-    color: var(--font-dark);
+    color: var(--dark);
     margin: 16px 0;
 }
 .content .info p {
@@ -174,6 +177,9 @@ body {
     justify-content: center;
     flex-direction: column;
 }
+.content .typewriter .info  {
+    width: 282px;
+}
 .content .typewriter .machine {
     width: 244px;
     height: 212px;
@@ -196,7 +202,7 @@ body {
     font-family: "Gilroy-regular";
     background-color: var(--white);
     position: relative;
-    width: 100%;
+    width: 282px;
     top: 45px;
     position: relative;
     margin-bottom: 48px ;
@@ -209,7 +215,7 @@ body {
 .cards .card .content-card .title {
     font-size: 20px;
     font-weight: bold;
-    margin: 16px 0;
+    margin: 16px 0 8px 0;
     color: var(--font-orange);
 }
 .cards .card .content-card .subtitle {
@@ -225,19 +231,28 @@ body {
 }
 .cards .card .content-card ul li {
     margin: 16px 0;
+    font-family: "Gilroy-light";
+    font-weight: 300;
     
+}
+.content .infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .content .infos .info {
     display: flex;
+    width: 282px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
 }
 .content .infos .info h2{
+    font-family: "Gilroy-medium";
     font-size: 24px;
     line-height: 1.2;
-    margin: 25px 0;
+    margin-bottom: 25px;
 }
 .content .plans .bg-blue-mobi{
     position: absolute;
@@ -247,31 +262,40 @@ body {
 }
 .content .plans .bg-blue-mobi img{
     max-height: 1440px;
-    width: 100vw;
-    
+    width: 100vw;    
 }
 .content .plans .info1-plans {
     margin-top: 70px;
     text-align: center;
+    width: 282px;
 }
-.content .plans h2{
+.content .plans .title{
+    font-family: "Gilroy-medium";
     color: var(--yellow);
     font-size: 24px;
+}
+.content .plans .text{
+    font-family: "Gilroy-regular";
 }
 .content .infos .info2 {
     padding: 70px 0;
 }
+.content .infos .info2 .row {
+    width: 282px;
+}
 .content .infos .info2 .row h2{
-    font-family: "Gabriela";
+    font-family: "Gabriela-semi-bold";
     color: var(--font-orange);
     font-size: 30px;
     line-height: 1.5;
     margin-bottom: 16px;
 }
 .content .infos .info2 .row p {
-    font-family: "Gilroy-regular";
+    font-family: "Gilroy-light";
     line-height: 1.5;
-    margin: 24px 0
+    font-weight: 300;
+    margin: 24px 0;
+
 }
 .content .infos .info2 .row .btn-default {
     margin-top: 24px;
@@ -281,11 +305,14 @@ body {
 }
 .content .infos .info .info-img2 {
     margin: 57px 0;
+    width: 282px;
+    height: 202px;
 }
 .content .plans {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 100px;
 }
 .content .plans p{
     color: var(--white);
@@ -298,12 +325,14 @@ body {
 }
 
 .content .plans .row-card-plan .card2  {
-    width: 100%;
+    max-width: 361px;
+    min-width: 282px;
     background-color: var(--yellow);
     padding: 18px 0;
     margin: 25px 0;
     font-family: "Gilroy-regular";
     margin-bottom: 75px;
+    border-radius: 5px;
 }
 .content .plans .row-card-plan .card2 .content-card {
     margin: 0px 10px;
@@ -316,15 +345,13 @@ body {
     align-items: center;
 }
 
-.content .plans .row-card-plan .card2 .content-card h2 {
+.content .plans .row-card-plan .card2 .content-card .title-card {
     color: var(--dark);
     text-transform: uppercase;
     font-size: 20px;
-    margin-bottom: 17px;
-
 }
 .content .plans .row-card-plan .card2 .content-card .subtitle {
-    font-weight: bold;
+    font-family:"Gilroy-bold";
     font-size: 30px;
     line-height: 36px;
     text-align: center;
@@ -336,10 +363,11 @@ body {
 
 }
 .content .plans .row-card-plan .card2 .content-card ul li{
-    margin: 32px 24px 32px 60px;
+    margin: 0px 20px 32px 60px;
+    position: relative;
 }
 .content .plans .row-card-plan .card2 .content-card ul li::before {
-    left: 60px;
+    left: -30px;
     position: absolute;
     content: "✓";
     width: 15px;
@@ -350,6 +378,7 @@ body {
 
 .content .plans .info {
     display: flex;
+    width: 282px;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -359,7 +388,7 @@ body {
     margin: 16px;
 }
 .content .accordion {
-    margin-top: 150px;
+    margin-top: 45px;
 }
 .content .accordion .title {
     font-family: "Gilroy-medium";
@@ -371,6 +400,7 @@ body {
 .collapse-accordion ul {
     font-family: "Gilroy-regular";
     list-style: none;
+    max-width: 815px;
     margin: 0;
     padding: 0;
 }
@@ -508,7 +538,6 @@ transition: transform .5s ease-out;
     margin: 80px 0;
 }
 .content footer .privacity {
-    font-size: 14px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -518,25 +547,25 @@ transition: transform .5s ease-out;
     text-align: center;
     text-decoration: none;
     color: var(--dark);
+    font-size: 13px;
     padding: 0 13px;
 }
 .content footer span{
     width: 100%;
+    font-size: 13px;
     margin-top: 16px;
     text-align: center;
 }
 
 @media screen and (min-width: 1024px) {
-    .container {
-    }
-    .container .content {
-    }
     .content .logo {
-        height: 135px;
+        height: 80px;
     }
     .content .logo img {
         position: absolute;
-        top: 0px;
+        height: 115px;
+        width: 127px;
+        top: 0px;        
     }
     .container .bg-yellow-mobi {
         display: none;
@@ -568,6 +597,12 @@ transition: transform .5s ease-out;
         line-height: 1.2;
         font-weight: bold;
     }
+    .content .info-video .info p {
+        font-size: 20px;
+    }
+    .content .info-video .info .btn-default {
+        margin: 24px 0 0 0;
+    }
     .content .info-video .video{
         width: 665px;
         height: 374px;
@@ -586,7 +621,7 @@ transition: transform .5s ease-out;
     }
     .content .info-video .info h2{
         font-size: 42px;
-        color: var(--font-dark);
+        color: var(--dark);
     } 
     .content .typewriter {
         flex-direction: row;
@@ -627,11 +662,12 @@ transition: transform .5s ease-out;
         padding: 35px 23px 35px 57px;
     }
     .cards .card {
-        width: 62%;
+        max-width: 66%;
+        min-width: 800px;
         height: 386px;
         top: 0;
         position: relative;
-        margin-bottom: 60px;
+        margin-bottom: 64px;
     }
     .cards .card .content-card .subtitle {
         font-size: 24px;
@@ -655,6 +691,9 @@ transition: transform .5s ease-out;
         right: -207px;
         top: 20px;
     }
+    .cards .card .content-card .title {
+        margin: 25px 0;
+    }
     .cards .card .content-card ul li{
         font-size: 18px;
         margin: 8px 0;
@@ -668,7 +707,7 @@ transition: transform .5s ease-out;
     .content .infos .info {
         font-family: "Gilroy-regular";
         text-align: center;
-        width: 38%;
+        width: 39%;
     }
     .content .infos .info h2{
         font-size: 36px;
@@ -686,29 +725,34 @@ transition: transform .5s ease-out;
     .content .infos .info2 {
         display: flex;
         justify-content: flex-start;
-        width: 65%;
+        width: 75%;
         position: relative;
+        padding-bottom: 130px;
     }
     .content .infos .info2 .row {
-        width: 685px;
+        width: 560px;
     }
     .content .infos .info2 .row h2{
         font-size: 48px;
     }
     .content .infos .info2 .row p{
-        width: 450px;
+        width: 442px;
+        font-size: 18px;
     }
     .content .infos .info2 .note-desk {
         display: flex;
         margin-top: 14rem;
         position: absolute;
-        right: -130px;
+        right: 62px;
     }
     .content .infos .info .info-img2 {
         width: 800px;
         height: 574px;
         margin-top: 25px;
         margin-bottom: 80px;
+    }
+    .content .plans {
+        font-family: "Gilroy-regular";
     }
     .content .plans .bg-blue-desk {
         display: flex;
@@ -723,25 +767,24 @@ transition: transform .5s ease-out;
     .content .plans .bg-blue-mobi{
         display: none;
     }
-    .content .plans {
-        font-family: "Gilroy-regular";
-    }
-    .content .plans h2 {
+    
+    .content .plans .title {
         font-size: 36px;
         color: var(--yellow);
         line-height: 1.2;
     }
-    .content .plans p {
+    .content .plans .text {
+        font-family: "Gilroy-light";
         font-size: 20px;
         line-height: 1.2;
         color: var(--white);
-        margin-top: 16px;
+        margin-top: 25px;
         font-size: 20px;
     }
     .content .plans .info1-plans {
         text-align: center;
         margin-top: 180px;
-        width: 38%;
+        width: 42%;
     }
     .content .plans .row-card-plan {
         display: flex;
@@ -785,7 +828,7 @@ transition: transform .5s ease-out;
         margin-bottom: 0;
     }
     .content .plans .info {
-        width: 38%;
+        width: 42%;
     }
     .content .accordion {
         display: flex;
@@ -793,6 +836,7 @@ transition: transform .5s ease-out;
         align-items:center;
         flex-direction: column;
         margin-bottom: 50px;
+        margin-top: 150px;
     }
     .content .accordion .title {
         margin-bottom: 19px;
@@ -807,12 +851,12 @@ transition: transform .5s ease-out;
         padding: 0 20px;
     }
 }
-@media (max-width: 1135px){
+/* @media screen and (min-width: 1135px) and (max-width: 900px){
     .content .info-video .video{
         width: 30rem;
         height: 20rem;
     }
-}
+} */
 @media (max-width: 1260px){
     .content .typewriter .book {
         width: 244px;
@@ -821,12 +865,7 @@ transition: transform .5s ease-out;
         width: 233px;
     }
 }
-@media (max-width: 767px){
-    .content .info-video .video{
-        width: 263px;
-        height: 159px;
-    }
-}
+
 @media screen and (max-width: 1667px) {
     .content .typewriter .book {
         top: 0;
