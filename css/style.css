@@ -627,7 +627,6 @@ transition: transform .5s ease-out;
         flex-direction: row;
         position: relative;
         margin-top: 144px;
-        position: relative;
         margin-bottom: 80px;
     }
     .content .typewriter .info h2 {
@@ -707,7 +706,7 @@ transition: transform .5s ease-out;
     .content .infos .info {
         font-family: "Gilroy-regular";
         text-align: center;
-        width: 39%;
+        width: 542px;
     }
     .content .infos .info h2{
         font-size: 36px;
@@ -743,7 +742,7 @@ transition: transform .5s ease-out;
         display: flex;
         margin-top: 14rem;
         position: absolute;
-        right: 62px;
+        right: -50px;
     }
     .content .infos .info .info-img2 {
         width: 800px;
@@ -784,7 +783,7 @@ transition: transform .5s ease-out;
     .content .plans .info1-plans {
         text-align: center;
         margin-top: 180px;
-        width: 42%;
+        width: 542px;
     }
     .content .plans .row-card-plan {
         display: flex;
@@ -828,7 +827,7 @@ transition: transform .5s ease-out;
         margin-bottom: 0;
     }
     .content .plans .info {
-        width: 42%;
+        width: 542px;
     }
     .content .accordion {
         display: flex;
@@ -851,12 +850,6 @@ transition: transform .5s ease-out;
         padding: 0 20px;
     }
 }
-/* @media screen and (min-width: 1135px) and (max-width: 900px){
-    .content .info-video .video{
-        width: 30rem;
-        height: 20rem;
-    }
-} */
 @media (max-width: 1260px){
     .content .typewriter .book {
         width: 244px;
