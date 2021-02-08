@@ -33,7 +33,7 @@
     font-weight: 300;
 }
 @font-face {
-    font-family: "Gabriela-semi-bold" sans-serif;
+    font-family: "Gabriela-semi-bold";
     src: url("/fonts/Gabriela-SemiBold.otf");
     font-style: normal;
 }
@@ -342,7 +342,7 @@ body {
     padding: 18px 0;
     margin: 25px 0;
     font-family: "Gilroy-regular";
-    margin-bottom: 75px;
+    margin-bottom: 23px;
     border-radius: 5px;
 }
 .content .plans .row-card-plan .card2 .content-card {
@@ -608,7 +608,7 @@ transition: transform .5s ease-out;
     .content .info-video {
         justify-content: center;
         align-items: center;
-        margin-top: 120px;
+        margin-top: 98px;
         
     }
     .content .info-video h2 {
@@ -634,7 +634,7 @@ transition: transform .5s ease-out;
         margin: 80px 0;
     }
     .content .info-video .info {
-        width: 415px;
+        width: 920px;
         margin-top: 0;
         text-align: center;
         display: flex;
@@ -746,7 +746,7 @@ transition: transform .5s ease-out;
     .content .infos .info2 {
         display: flex;
         justify-content: flex-start;
-        width: 75%;
+        width: 1240px;
         position: relative;
         padding-bottom: 130px;
     }
@@ -810,7 +810,7 @@ transition: transform .5s ease-out;
         justify-content: center;
         align-items: center;
         margin-top: 40px;
-        margin-bottom: 107px;
+        margin-bottom: 40px;
     }
     .content .plans .row-card-plan .card2  {
         width: 360px;
